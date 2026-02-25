@@ -175,9 +175,9 @@ export default function AppPage() {
     <div className="min-h-screen bg-zinc-950 text-zinc-100">
       {/* Background polish */}
       <div className="pointer-events-none fixed inset-0">
-        <div className="absolute -top-40 left-1/2 h-96 w-[42rem] -translate-x-1/2 rounded-full bg-blue-600/15 blur-3xl" />
-        <div className="absolute top-40 right-[-10rem] h-80 w-80 rounded-full bg-violet-500/10 blur-3xl" />
-        <div className="absolute bottom-[-12rem] left-[-12rem] h-96 w-96 rounded-full bg-emerald-500/10 blur-3xl" />
+        <div className="absolute -top-40 left-1/2 h-96 w-2xl -translate-x-1/2 rounded-full bg-blue-600/15 blur-3xl" />
+        <div className="absolute top-40 -right-40 h-80 w-80 rounded-full bg-violet-500/10 blur-3xl" />
+        <div className="absolute -bottom-48 -left-48 h-96 w-96 rounded-full bg-emerald-500/10 blur-3xl" />
       </div>
 
       <div className="relative mx-auto max-w-5xl px-4 py-10 md:py-14">
@@ -201,7 +201,7 @@ export default function AppPage() {
           <div className="flex items-center gap-3">
             <div className="hidden md:block text-right">
               <div className="text-xs text-zinc-500">Logged in</div>
-              <div className="text-sm text-zinc-200 truncate max-w-[260px]">
+              <div className="text-sm text-zinc-200 truncate max-w-65">
                 {email ?? ""}
               </div>
             </div>
@@ -293,7 +293,7 @@ export default function AppPage() {
                     "shadow-[0_1px_0_rgba(255,255,255,0.06)_inset]",
                     submitting || loadingEntry
                       ? "bg-zinc-800 text-zinc-500 cursor-not-allowed border border-zinc-800"
-                      : "bg-gradient-to-b from-blue-500 to-blue-600 hover:from-blue-400 hover:to-blue-600 text-white border border-blue-400/30",
+                      : "bg-linear-to-b from-blue-500 to-blue-600 hover:from-blue-400 hover:to-blue-600 text-white border border-blue-400/30",
                   ].join(" ")}>
                   {submitting
                     ? "Saving…"
